@@ -14,5 +14,11 @@ public class clientesServiceImpl extends CommonSvcImpl<clientes, clientesReposit
     public Iterable<clientes> findAll() {
         return repository.findAll();
     }
+
+    @Override
+    public clientes save(clientes cliente) {
+        System.out.println("Guardando cliente");
+        return repository.save(cliente);
+    }
     
 }
